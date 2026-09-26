@@ -7,8 +7,7 @@ import com.example.enums.OrderStatus;
 
 public class FoodOrderMapper {
 
-	// Client's request -> a new entity, ready to be saved.
-	// New orders always start as PENDING - the client never gets to set this directly.
+	
 	public static FoodOrder toEntity(FoodOrderRequestDTO dto) {
 
 		FoodOrder order = new FoodOrder();
@@ -21,7 +20,6 @@ public class FoodOrderMapper {
 		return order;
 	}
 
-	// Saved entity -> what the client actually sees in the response
 	public static FoodOrderResponseDTO toResponseDTO(FoodOrder order) {
 
 		return new FoodOrderResponseDTO(
